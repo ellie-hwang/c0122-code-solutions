@@ -1,0 +1,99 @@
+.container {
+  width: 800px;
+  margin: 40px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-half {
+  flex-basis: 50%;
+}
+
+.column-one-third {
+  flex-basis: 33%;
+}
+
+.column-two-thirds {
+  flex-basis: 66%;
+}
+
+.justify-center {
+  text-align: center;
+}
+
+.learn-more {
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+  font-size: 60%;
+  color: rgb(211 84 77);
+  letter-spacing: 1px;
+  padding: 7px 30px;
+  background-color: white;
+  border: 2px solid rgb(211 84 77);
+}
+
+.icon {
+  width: 70%;
+  margin-right: 5px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.marg-top35 {
+  margin-top: 35px;
+}
+
+.marg-top10 {
+  margin-top: 10px;
+}
+
+.marg-top30 {
+  margin-top: 30px;
+}
+
+p.mission {
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  font-size: 60%;
+  padding-left: 18%;
+  padding-right: 18%;
+  line-height: 1.7em;
+  color: rgb(134 134 134);
+}
+
+p.blurb {
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  font-size: 60%;
+  line-height: 1.7em;
+  padding-right: 15%;
+  color: rgb(134 134 134);
+}
+
+h1 {
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 60%;
+}
+
+h3 {
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.blurb {
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  font-size: 70%;
+  color: rgb(134 134 134);
+}
