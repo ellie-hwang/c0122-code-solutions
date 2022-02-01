@@ -16,7 +16,7 @@ var orderHistory = [
       deliveryDate: 'August 8, 2020',
       returnCloseDate: 'September 7, 2020'
     },
-    price: 34
+    totalPrice: 34
   },
   {
     items: [
