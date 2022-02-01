@@ -9,6 +9,8 @@ var orderHistory = [
         price: 31.55
       }
     ],
+    recipient: 'JS Masher',
+    orderNumber: '',
     orderDate: 'August 4, 2020',
     orderStatus:
     {
@@ -28,6 +30,8 @@ var orderHistory = [
         price: 41.33
       }
     ],
+    recipient: 'JS Masher',
+    orderNumber: '',
     orderDate: 'July 19, 2020',
     orderStatus:
     {
@@ -46,6 +50,8 @@ var orderHistory = [
         price: 15.98
       }
     ],
+    recipient: 'JS Masher',
+    orderNumber: '',
     orderDate: 'July 4, 2020',
     orderStatus:
     {
@@ -72,6 +78,8 @@ var orderHistory = [
         price: 33.99
       }
     ],
+    recipient: 'JS Masher',
+    orderNumber: '',
     orderDate: 'July 3, 2020',
     orderStatus:
     {
