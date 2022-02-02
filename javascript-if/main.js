@@ -61,6 +61,8 @@ function categorizeAcidity(pH) {
     return 'acid';
   } else if (pH > 7) {
     return 'base';
+  } else {
+    return 'invalid pH level';
   }
 }
 
