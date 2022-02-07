@@ -14,5 +14,6 @@ function tail(array) {
   var newList = [];
   for (let i = 1; i < array.length; i++) {
     newList.push(array[i]);
-  } return newList;
+  }
+  return newList;
 }

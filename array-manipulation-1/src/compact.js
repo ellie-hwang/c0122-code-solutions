@@ -16,5 +16,6 @@ function compact(array) {
     if (!array[i] === false) {
       newList.push(array[i]);
     }
-  } return newList;
+  }
+  return newList;
 }

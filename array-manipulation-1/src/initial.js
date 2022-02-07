@@ -14,5 +14,6 @@ function initial(array) {
   var newList = [];
   for (let i = 0; i < array.length - 1; i++) {
     newList.push(array[i]);
-  } return newList;
+  }
+  return newList;
 }
