@@ -11,15 +11,16 @@ output: word (string)
 
 function capitalizeWord(word) {
   var capWord = '';
-  if (word === 'jaVAsCrIPt' || word === 'javaScript' || word === 'JavascRipt') {
-    capWord = 'JavaScript';
+  var lowerCase = word.toLowerCase();
+  if (lowerCase === 'javascript') {
+    capWord += 'JavaScript';
     return capWord;
   }
-  for (let i = 0; i < word.length; i++) {
+  for (let i = 0; i < lowerCase.length; i++) {
     if (i === 0) {
-      capWord += word[i].toUpperCase();
+      capWord += lowerCase[i].toUpperCase();
     } else {
-      capWord += word[i].toLowerCase();
+      capWord += lowerCase[i];
     }
   }
   return capWord;

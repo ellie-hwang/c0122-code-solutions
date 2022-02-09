@@ -16,7 +16,6 @@ function truncate(length, string) {
     shortened = string + '...';
     return shortened;
   }
-  for (let i = 0; i < length; i++) {
-    shortened += string[i];
-  } return shortened + '...';
+  shortened = string.slice(0, length);
+  return shortened + '...';
 }
