@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.room-off {
+  background-color: black;
+}
+
+.room-on {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-bulb-off {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(102 102 102);
+}
+
+.light-bulb-on {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(255 243 138);
+  box-shadow: 0 0 30px rgb(255 255 145);
+}
