@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.modal-button {
+  background-color: orange;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 7px 7px orangered;
+  top: 20px;
+  left: 20px;
+  position: fixed;
+}
+
+.black-bg {
+  background: rgb(15 15 15 / 80%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dialogue-box {
+  background-color: rgb(255 255 255);
+  height: 250px;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-button {
+  background-color: rgb(184 0 0);
+  color: white;
+  box-shadow: 5px 5px rgb(102 0 0);
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+}
+
+h2 {
+  margin: 0; /* without this there is a white margin on top of h2 */
+  padding: 50px 30px 20px;
+  color: black;
+}
+
+.display-hidden {
+  display: none;
+}
