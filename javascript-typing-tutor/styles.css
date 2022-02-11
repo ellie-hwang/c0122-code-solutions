@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.type-test {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.black-txt {
+  color: black;
+}
+
+.green-txt {
+  color: rgb(47 240 29);
+}
+
+.red-text {
+  color: rgb(200 0 0);
+}
+
+.underline {
+  text-decoration: underline;
+}
