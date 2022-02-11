@@ -30,7 +30,6 @@ body {
   top: 20px;
   left: 20px;
   position: fixed;
-  z-index: -1;
 }
 
 .black-bg {
@@ -40,9 +39,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: initial;
-
-  /* this moves the background for some reason... */
 }
 
 .dialogue-box {
@@ -50,7 +46,10 @@ body {
   height: 250px;
   width: 400px;
   border-radius: 10px;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .no-button {
@@ -68,4 +67,8 @@ h2 {
   margin: 0; /* without this there is a white margin on top of h2 */
   padding: 50px 30px 20px;
   color: black;
+}
+
+.display-hidden {
+  display: none;
 }
