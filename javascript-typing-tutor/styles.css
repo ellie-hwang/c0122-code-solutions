@@ -33,10 +33,14 @@ body {
   color: rgb(47 240 29);
 }
 
-.red-text {
+.red-txt {
   color: rgb(200 0 0);
 }
 
-.underline {
-  text-decoration: underline;
+.border-bottom {
+  border-bottom: 4px solid black;
+}
+
+.red-border-bottom {
+  border-bottom: 4px solid rgb(200 0 0);
 }
