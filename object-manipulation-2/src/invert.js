@@ -2,21 +2,13 @@
 
 function invert(source) {
   var invertObj = {};
-  var invertValues = Object.values(source);
-  // console.log(invertValues);
-  var invertKeys = Object.keys(source);
-  // console.log(invertKeys);
+  var invertKeys = Object.values(source);
+  var invertValues = Object.keys(source);
   for (let i = 0; i < Object.keys(source).length; i++) {
+    if (JSON.stringify(invertKeys[i]) === 'Null') {
+      invertKeys[i] = 'NaN';
+    }
     invertObj[invertKeys[i]] = invertValues[i];
   }
-  // console.log(invertObj);
   return invertObj;
 }
-
-var source = {
-  age: 'bloop',
-  occupation: 'programmer',
-  language: 'JavaScript'
-};
-
-invert(source);
