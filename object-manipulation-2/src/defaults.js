@@ -13,9 +13,9 @@ return the modified target object
 */
 
 function defaults(target, source) {
-  for (let i = 0; i < Object.keys(source).length; i++) {
-    if (!(Object.keys(source)[i] in target) && target !== {}) {
-      target[Object.keys(source)[i]] = Object.values(source)[i];
+  for (var key in source) {
+    if (!(key in target) && target !== {}) {
+      target[key] = source[key];
     }
   }
   return target;

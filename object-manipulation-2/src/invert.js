@@ -12,13 +12,11 @@ values
 
 function invert(source) {
   var invertObj = {};
-  var invertKeys = Object.values(source);
-  var invertValues = Object.keys(source);
-  for (let i = 0; i < Object.keys(source).length; i++) {
-    if (invertKeys[i] === 'Null') {
-      invertKeys[i] = 'NaN';
+  for (var key in source) {
+    if (source[key] === 'Null') {
+      invertObj.NaN = key;
     }
-    invertObj[invertKeys[i]] = invertValues[i];
+    invertObj[source[key]] = key;
   }
   return invertObj;
 }
