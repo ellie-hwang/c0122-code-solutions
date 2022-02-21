@@ -301,10 +301,8 @@ function shuffleDeck(cardDeck) {
   return cardDeck;
 }
 
-shuffleDeck(cardDeck);
-
-function dealCards(cardDeck) {
-  for (let i = 0; i < 2; i++) {
+function dealCards(numOfCards) {
+  for (let i = 0; i < numOfCards; i++) {
     for (let j = 0; j < players.length; j++) {
       players[j].hand.push(cardDeck[i]);
       cardDeck.splice(i, 1);
@@ -312,21 +310,37 @@ function dealCards(cardDeck) {
   }
 }
 
-dealCards(cardDeck);
-
-function scoreHand(playerObj) {
+function scoreHands(players) {
   var score = null;
-  for (let i = 0; i < playerObj.hand.length; i++) {
-    score += playerObj.hand[i].value;
+  for (let j = 0; j < players.length; j++) {
+    for (let i = 0; i < players[j].hand.length; i++) {
+      score += players[j].hand[i].value;
+    }
+    players[j].score = score;
+    score = 0;
   }
-  playerObj.score = score;
-  return playerObj.score;
 }
 
-for (let i = 0; i < players.length; i++) {
-  scoreHand(players[i]);
+var highScore = 0;
+var winner = null;
+
+function findWinner(players) {
+  for (let i = 0; i < players.length; i++) {
+    if (players[i].score > highScore) {
+      highScore = players[i].score;
+      winner = players[i].name;
+    }
+  }
+  return winner;
 }
 
-// function findWinner(players) {
+function playCardGame(players, numOfCards) {
+  shuffleDeck(cardDeck);
+  dealCards(numOfCards);
+  scoreHands(players);
+  findWinner(players);
+  // console.log(players);
+  // console.log('The winner is ' + winner + ' with a high score of ' + highScore);
+}
 
-// }
+playCardGame(players, 2);
