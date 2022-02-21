@@ -1,5 +1,15 @@
 /* exported flatten */
-
+/* function: Return a new Array with any direct child Arrays unwrapped. This function should only "flatten" array by one level.
+input: an array
+output: a flattened array
+-Make an empty array to store the flattened array
+-Go through each item of the input array:
+-If the item in the array is not an array, put the item in the storage as is
+-If the item in the array has a length, push the item in the nested array into the
+storage for the flattened array
+-If the item in the array does not have a length, push the item as is into the storage
+-Return the flattened array from storage
+*/
 function flatten(array) {
   var flatArray = [];
 
