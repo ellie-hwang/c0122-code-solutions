@@ -1,4 +1,33 @@
 /* exported titleCase */
+/* function: Take a title and capitalize it in APA style
+input: title (string)
+output: title in APA style capitalization
+-Lowercase the input title and store it in a variable
+-Make a copy of the lowercase title
+-Take the title from the copy and put each word, hyphen, and colon in a list
+-Make a storage for the capitalized words (empty array)
+-Make a storage for the final APA style title (empty string)
+-Make a dictionary for words that shouldn't be capitalize (ex: a, for, the, of, etc)
+-Go through each word of the list (array with lowercased words)
+-If the word is javascript, return JavaScript and add it to the empty array for capitalized words
+-If the word is api, return API and add it to the empty array for capitalized words
+-If the word is the first word in the title, capitalize the first letter and put it in the array
+-If the word is more than 4 letters, capitalize the first letter and put it in the array
+-If the word before the current word is a colon, capitalize the first letter of the current word
+and put it in the array
+-If the word before or after the current word is a hyphen, capitalize the first letter of the current
+word and put it in the array
+-If the word is not the first word AND the word is in the dictionary, keep the word as is and add
+to the array
+-For all other words, capitalize the first letter of the word and add it into the array
+-Now we have to take the words out of the array in order and put it into the storage for the final result
+-Go through each word of the capitalized word array, add each word and a space after each word into the string
+-Start from the beginning of the array
+-If the word after the current word is a color, only push the word in. If the word after or before the current
+word is a hyphen, only push the word in to the string
+-If the word is a hyphen, only push the hyphen in
+-Return the final string
+*/
 
 function titleCase(title) {
   var lcTitle = title.toLowerCase();
