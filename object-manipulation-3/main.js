@@ -1,4 +1,46 @@
 // console.log('Lodash is loaded:', typeof _ !== 'undefined');
+/* function: For this challenge you will be writing a script that
+runs a simple card game. You'll be dealing two cards to each of
+four players and then declaring a winner by scoring their hands.
+input: array of players and number of cards dealt
+output: winner's name (a string)
+-Create an array of 4 player objects, each has a name, hand, and score
+-Create an array of 52 card objects, each has a rank, suit, and value
+-Make a function to shuffle the cards with the cardDeck array as a parameter
+  -Reference: Fisher-Yates shuffle
+  -Create a variable to represent the number of unshuffled elements (m)
+  -Create a variable to hold the unshuffled element (tempValue)
+  -Create a variable to represent the random index (randomIndex)
+  -While the number of unshuffled elements (m) is not zero,
+    -Generate a random index
+    -Decrement m
+    -Store the value of the cardDeck[m] in the tempValue
+    -Store the value of the cardDeck[randomIndex] in cardDeck[m]. This is the shuffle
+    -Store the value of the tempValue in cardDeck[randomIndex]. This is the unshuffled element
+    -All the shuffled elements are towards the back of the array and all the unshuffled elements
+    are in the front of the array
+    -Return the cardDeck array
+-Make a function to deal the cards with the number of cards for each hand as a parameter
+  -Take one card object from the shuffled cardDeck and assign it to the hand property in each
+  player object
+  -Repeat this process twice
+-Make a function to score the hands with the players array as a parameter
+  -Take each player object in the players array and add each value in the card object in the hand property of the player object
+  -Make sure to reset the score to zero after each player object's hand is scored
+  -Return the score of each player and store it in the score property of the player object
+-Make a function to find the winner with the players array as a parameter
+  -Set the highestScore as zero
+  -Go through each value of the score property of each player object
+  -If the score of the player object is higher than the highestScore, assign the player object's score
+  to highestScore
+  -Return the value of the name property of the player object, with the highest score
+-Make a function for the game
+  -Shuffle the deck
+  -Deal the cards
+  -Score the players' hands
+  -Find the winner
+-Call the playCardGame function
+*/
 
 var players = [
   {
