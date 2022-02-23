@@ -4,7 +4,6 @@ var $container = document.querySelector('.container');
 
 $container.addEventListener('click', switchImage);
 
-var timerId = null;
 var i = 0;
 
 function switchImage(event) {
@@ -52,8 +51,7 @@ function autoSwitchImage() {
     i = 0;
     $carouselImg[i].className = 'carousel-img';
     $carouselPosition[i].className = 'fa-solid fa-circle carousel-position';
-    clearInterval(timerId);
   }
 }
 
-timerId = setInterval(autoSwitchImage, 3000);
+setInterval(autoSwitchImage, 3000);
