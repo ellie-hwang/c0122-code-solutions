@@ -3,6 +3,7 @@ var $carouselPosition = document.querySelectorAll('.carousel-position');
 var $container = document.querySelector('.container');
 
 $container.addEventListener('click', switchImage);
+$container.addEventListener('click', switchImageCircles);
 
 var i = 0;
 
@@ -34,6 +35,20 @@ function switchImage(event) {
       i = $carouselImg.length - 1;
       $carouselImg[i].className = 'carousel-img';
       $carouselPosition[i].className = 'fa-solid fa-circle carousel-position';
+    }
+  }
+}
+
+function switchImageCircles(event) {
+  if (event.target.getAttribute('class') === 'fa-regular fa-circle carousel-position') {
+    for (let j = 0; j < $carouselImg.length; j++) {
+      if (event.target.getAttribute('data-entry-id') === $carouselImg[j].getAttribute('data-entry-id')) {
+        $carouselImg[i].className = 'carousel-img hidden';
+        $carouselPosition[i].className = 'fa-regular fa-circle carousel-position';
+        $carouselImg[j].className = 'carousel-img';
+        $carouselPosition[j].className = 'fa-solid fa-circle carousel-position';
+        i = j;
+      }
     }
   }
 }
