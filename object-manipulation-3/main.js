@@ -138,28 +138,38 @@ function findWinner(players) {
     }
   }
   for (let i = 0; i < players.length; i++) {
-    if (players[i].score !== highScore) {
-      players.splice(i, 1);
-      tiedWinners = [...players];
-      i--;
+    if (players[i].score === highScore) {
+      tiedWinners.push(players[i]);
+      i++;
     }
   }
 
-  if (players.length > 1) {
+  if (tiedWinners.length > 1) {
     console.log(tiedWinners);
-    breakTie(players);
+    breakTie(tiedWinners);
   } else {
     console.log(winner);
   }
 }
 
-function breakTie(players) {
-  while (players.length > 1) {
+function breakTie(tiedWinners) {
+  highScore = 0;
+  while (tiedWinners.length > 1) {
     console.log('Starting tie-breaker...');
-    dealCards(1);
-    scoreHands(players);
-    findWinner(players);
+    for (let i = 0; i < tiedWinners.length; i++) {
+      tiedWinners[i].hand.push(cardDeck[i]);
+      cardDeck.splice(i, 1);
+    }
+    scoreHands(tiedWinners);
+    for (let i = 0; i < tiedWinners.length; i++) {
+      if (tiedWinners[i].score > highScore) {
+        highScore = tiedWinners[i].score;
+        winner = tiedWinners[i].name;
+      }
+    }
   }
+  console.log(winner + 'has won the tie-breaker');
+  return winner;
 }
 
 function playCardGame(players, numOfCards) {
