@@ -145,11 +145,9 @@ function findWinner(players) {
   }
 
   if (tiedWinners.length > 1) {
-    console.log(players);
-    console.log(tiedWinners);
     breakTie(tiedWinners);
   } else {
-    console.log(winner);
+    return winner;
   }
 }
 
