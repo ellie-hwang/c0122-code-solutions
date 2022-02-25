@@ -191,7 +191,6 @@ function playCardGame(players, numOfCards) {
   dealCards(numOfCards);
   scoreHands(players);
   findWinner(players);
-  console.log(players);
   // console.log(players);
   // console.log('The winner is ' + winner + ' with a high score of ' + highScore);
 }
