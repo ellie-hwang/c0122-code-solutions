@@ -134,7 +134,7 @@ function findWinner(players) {
   for (let i = 0; i < players.length; i++) {
     if (players[i].score > highScore) {
       highScore = players[i].score;
-      winner = players[i].name;
+      winner = players[i];
     }
   }
   for (let i = 0; i < players.length; i++) {
@@ -147,14 +147,19 @@ function findWinner(players) {
   if (tiedWinners.length > 1) {
     breakTie(tiedWinners);
   } else {
+    console.log(winner.name + ' wins with ' + winner.score + ' points.');
     return winner;
   }
 }
 
 function breakTie(tiedWinners) {
   highScore = 0;
+  var message = '';
+  for (let i = 0; i < tiedWinners.length; i++) {
+    message += tiedWinners[i].name + ' has ' + tiedWinners[i].score + ' points. ';
+  }
+  console.log(message);
   console.log('Starting tie-breaker...');
-  console.log(tiedWinners);
   for (let i = 0; i < tiedWinners.length; i++) {
     tiedWinners[i].hand.push(cardDeck[i]);
     cardDeck.splice(i, 1);
@@ -175,8 +180,8 @@ function breakTie(tiedWinners) {
   }
 
   if (tiedWinners.length === 1) {
-    winner = tiedWinners[0].name;
-    console.log('The winner is: ' + winner);
+    winner = tiedWinners[0];
+    console.log(winner.name + ' wins with ' + winner.score + ' points.');
     return winner;
   } else {
     breakTie(tiedWinners);
