@@ -54,7 +54,7 @@ var players = [
     score: null
   },
   {
-    name: 'Spongebob Squarepants',
+    name: 'Spongebob',
     hand: [],
     score: null
   },
@@ -145,6 +145,7 @@ function findWinner(players) {
   }
 
   if (tiedWinners.length > 1) {
+    console.log(players);
     console.log(tiedWinners);
     breakTie(tiedWinners);
   } else {
@@ -154,22 +155,34 @@ function findWinner(players) {
 
 function breakTie(tiedWinners) {
   highScore = 0;
-  while (tiedWinners.length > 1) {
-    console.log('Starting tie-breaker...');
-    for (let i = 0; i < tiedWinners.length; i++) {
-      tiedWinners[i].hand.push(cardDeck[i]);
-      cardDeck.splice(i, 1);
-    }
-    scoreHands(tiedWinners);
-    for (let i = 0; i < tiedWinners.length; i++) {
-      if (tiedWinners[i].score > highScore) {
-        highScore = tiedWinners[i].score;
-        winner = tiedWinners[i].name;
-      }
+  console.log('Starting tie-breaker...');
+  console.log(tiedWinners);
+  for (let i = 0; i < tiedWinners.length; i++) {
+    tiedWinners[i].hand.push(cardDeck[i]);
+    cardDeck.splice(i, 1);
+  }
+
+  scoreHands(tiedWinners);
+
+  for (let i = 0; i < tiedWinners.length; i++) {
+    if (tiedWinners[i].score > highScore) {
+      highScore = tiedWinners[i].score;
     }
   }
-  console.log(winner + 'has won the tie-breaker');
-  return winner;
+
+  for (let i = 0; i < tiedWinners.length; i++) {
+    if (tiedWinners[i].score !== highScore) {
+      tiedWinners.splice(i, 1);
+    }
+  }
+
+  if (tiedWinners.length === 1) {
+    winner = tiedWinners[0].name;
+    console.log('The winner is: ' + winner);
+    return winner;
+  } else {
+    breakTie(tiedWinners);
+  }
 }
 
 function playCardGame(players, numOfCards) {
