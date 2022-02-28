@@ -1,15 +1,12 @@
 function getMovieData() {
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://betterimdbot.herokuapp.com/swagger.json');
-  xhr.setRequestHeader('accept', 'application/json');
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.open('GET', 'https://www.omdbapi.com/?t=twilight&apikey=fd3f5e28');
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
     console.log(xhr.status);
     console.log(xhr.response);
   });
-  var param = 'q=q%20-%20twilight';
-  xhr.send(param);
+  xhr.send();
 }
 
 getMovieData();
