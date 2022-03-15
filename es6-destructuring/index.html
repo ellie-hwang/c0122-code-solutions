@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6-Destructuring</title>
+</head>
+<body>
+  <script>
+    const book1 = {
+      title: 'Goodnight Punpun',
+      author: 'Inio Asano',
+      libraryID: 3353
+    };
+    const { title, author, libraryID } = book1;
+    const description = `The title of the book is ${title}, the author is ${author}, and the libary id is ${libraryID}`;
+    console.log(description);
+
+    const book2 = {
+      title: 'Les Fleurs du mal',
+      author: 'Charles Baudelaire',
+      libraryID: 2345
+    };
+    const { title: title_, author: author_, libraryID: libraryID_ } = book2;
+    const description_ = `The title of the book is ${title_}, the author is ${author_}, and the libary id is ${libraryID_}`;
+    console.log(description_);
+  </script>
+</body>
+</html>
