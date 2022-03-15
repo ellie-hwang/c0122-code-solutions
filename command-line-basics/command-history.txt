@@ -1,0 +1,705 @@
+    1  git config --global user.name "Eleonora Hwang"
+    2  git config --global user.email "eleonorahwang@gmail.com"
+    3  git config --global --list
+    4  ~/repos
+    5  cd ~/repos
+    6  cd ~/repos/c0122-code-solutions
+    7  http http://www.example.com
+    8  http --verbose https://www.example.com
+    9  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   10  http --body GET https://example.com > http-messages/index.html
+   11  git branch --list
+   12  git branch http-messages
+   13  git switch http-messages
+   14  git status
+   15  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   16  http --body GET https://example.com > http-messages/index.html
+   17  git add .
+   18  git commit -m "Completed http-messages"
+   19  git push origin http-messages
+   20  git switch master
+   21  git switch http-messages
+   22  git switch master
+   23  git status
+   24  git branch javascript-ajax
+   25  git switch javascript-ajax
+   26  git status
+   27  git add .
+   28  git commit -m "Completed javascript-ajax"
+   29  git push origin javascript-ajax
+   30  git switch master
+   31  git pull origin master
+   32  cd ~/repos
+   33  cd /c0122-code-solutions
+   34  cd c0122-code-solutions
+   35  cd
+   36  cd ~/repos
+   37  git clone git@github.com:ellie-hwang/algorithm-practice.git
+   38  cd algorithm-practice
+   39  npm ci
+   40  git switch master
+   41  cd ~/repos/c0122-code-solutions
+   42  git switch master
+   43  cd ~/repos/c0122-code-solutions
+   44  git switch testing-apis
+   45  git push origin master
+   46  git push origin testing-apis
+   47  git status
+   48  git switch master
+   49  git pull origin master
+   50  cd ~/repos/algorithm-practice
+   51  git add .
+   52  git status
+   53  git push origin master
+   54  git status
+   55  git commit -m "Completed Palindrome"
+   56  git push origin master
+   57  git add .
+   58  git commit -m "Completed adjacent-elements-product"
+   59  git push origin master
+   60  git add .
+   61  git commit -m "Completed shape-area"
+   62  git push origin master
+   63  http https://betterimdbot.herokuapp.com/swagger.json q==twilight
+   64  http POST https://betterimdbot.herokuapp.com/swagger.json q==twilight
+   65  https POST https://betterimdbot.herokuapp.com/swagger.json q==twilight
+   66  https ://betterimdbot.herokuapp.com/swagger.json q==twilight
+   67  https://betterimdbot.herokuapp.com/swagger.json q==twilight
+   68  curl -X POST "http://betterimdbot.herokuapp.com/" -H "accept: application/json" -H "Content-Type: application/x-www-form-urlencoded" -d "q=spongebob"
+   69  http http://www.omdbapi.com/?t=jaws
+   70  http http://www.omdbapi.com/?t=jaws&apikey=fd3f5e28
+   71  http http://www.omdbapi.com/?i=tt3896198&apikey=fd3f5e28
+   72  http://www.omdbapi.com/?i=tt3896198&apikey=fd3f5e28
+   73  http http://www.omdbapi.com/?apikey=fd3f5e28&?t=jaws
+   74  http http://www.omdbapi.com/?apikey=fd3f5e28&t=jaws
+   75  http http://www.omdbapi.com/?i=tt3896198&apikey=fd3f5e28
+   76  http No API key provided.
+   77  http http://www.omdbapi.com/?i=tt3896198&apikey=fd3f5e28
+   78  http http://www.omdbapi.com/?apikey=fd3f5e28&i=tt3896198
+   79  http --verbose https://www.omdbapi.com/?t=twilight&apikey=fd3f5e28
+   80  http https://pokeapi.co/api/v2/pokemon/cubone
+   81  curl "https://www.omdbapi.com/?t=twilight&apikey=fd3f5e28"
+   82  https://m.media-amazon.com/images/M/MV5BMTQ2NzUxMTAxN15BMl5BanBnXkFtZTcwMzEyMTIwMg@@._V1_SX300.jpghttps://m.media-amazon.com/images/M/MV5BMTQ2NzUxMTAxN15BMl5BanBnXkFtZTcwMzEyMTIwMg@@._V1_SX300.jpg"
+   83  cd ~/repos/c0122-code-solutions
+   84  cd ~/repos/c0122-code-solutions
+   85  git switch testing-apis
+   86  git add .
+   87  git commit -m "Testing out OMDB api"
+   88  git status
+   89  git add .
+   90  git commit -m "Testing api's some more"
+   91  git push origin testing-apis
+   92  git switch master
+   93  cd ~/repos
+   94  git clone git@github.com:ellie-hwang/ajax-project.git
+   95  cd ajax-project
+   96  npm ci
+   97  git branch search-for-review
+   98  git switch search-for-review
+   99  git branch -m search-for-review issue-1-search-for-review
+  100  git branch --list
+  101  git status
+  102  git add .
+  103  git commit -m "Added div with dat-view attribute to HTML. Added form element to HTML. Added input element inside form with label. Added SEARCH button under input element"
+  104  git add .
+  105  git commit -m "Added styling to HTML elements"
+  106  git add .
+  107  git commit -m "Created nav bar with logo and Search anchor"
+  108  git add .
+  109  git commit -m "Added empty unordered list to div[data-view = "results-view"]"
+  110  git add .
+  111  git commit -m "Added dummy search results and styled them to look like wireframe"
+  112  git add .
+  113  git commit -m "Created data model in data.js"
+  114  git add .
+  115  git commit -m "Queried for the search input. Created new XMLHttpRequest object. Opened and sent http request for the keyword" 
+  116  git add .
+  117  git commit -m "Define a function that takes a single search result object and returns a DOM tree that matches one of the example search result"
+  118  git add .
+  119  git commit -m "Define a function that takes a single search result object and returns a DOM tree that matches one of the example search result"
+  120  git add .
+  121  git commit -m "Use a loop to create a DOM tree for each search result in the HTTP response and append it to the page when the submit button is clicked"
+  122  git add .
+  123  git commit -m "Define a function to swap from the results view to the search view when the SEARCH anchor is clicked"
+  124  git add .
+  125  git commit -m "Define a function to swap from the results view to the search view when the SEARCH anchor is clicked"
+  126  git add .
+  127  git commit -m "removed dummy data"
+  128  git add .
+  129  git commit -m "Old search entries are removed when user starts a new search"
+  130  cd ~/repos/ajax-project
+  131  git add .
+  132  git commit -m "Added condition to search function: If there is a space in the movie title input, change it to a +"
+  133  git add .
+  134  git commit -m "Created modal for movie details. Added dummy data"
+  135  git add .
+  136  git commit -m "Add event listener for info icon. When the icon is clicked, the movie details modal appears"
+  137  git add .
+  138  git commit -m "Define a function to create a DOM tree for the movie details dialogue box"
+  139  git add .
+  140  git commit -m "Define a function to create a DOM tree for the movie details dialogue box"
+  141  git status
+  142  git add .
+  143  git commit "Clean up: Removed commented out code, comments, unnecessary CSS. Made sure to turn cursor to pointer on clickable targets"
+  144  git commit -m "Clean up: Removed commented out code, comments, unnecessary CSS. Made sure to turn cursor to pointer on clickable targets"
+  145  git push origin issue-1-search-for-review
+  146  git branch -m issue-1-search-for-review issue-1-search-for-movie
+  147  git status
+  148  git push origin issue-1-search-for-movie
+  149  git add .
+  150  git commit -m "Removed searchResult property in data model"
+  151  git push origin issue-1-search-for-movie
+  152  git branch --list
+  153  git push origin --delete issue-1-search-for-review
+  154  git --list
+  155  git branch --list
+  156  git push origin issue-1-search-for-review
+  157  git push origin issue-1-search-for-movie
+  158  git add .
+  159  git commit -m "Set $closestLi variable to local scope"
+  160  git push origin issue-1-search-for-movie
+  161  git switch master
+  162  git pull origin master
+  163  git switch master
+  164  git branch issue-2-post-review
+  165  git switch issue-2-post-review
+  166  git pull origin master
+  167  git add .
+  168  git commit -m "Added Review button to the search result cards"
+  169  git add .
+  170  git commit -m "Add a div[data-view="review-form"] to the HTML. Added img element and stars"
+  171  git add .
+  172  git commit -m "Added form for creating a review to the div[data-view="review-form"]. Ensured that form looks nice on both mobile and desktop screens. Made all inputs of review form required."
+  173  git add .
+  174  git commit -m "Listen for 'click' events on the review-form. If the event.target matches a review-button, populate the movie title form input and poster url form input with the search result's movie title and poster url.Update the src attribute of the poster preview with the poster url input's value"
+  175  git add .
+  176  git commit -m "Define a function to set the star rating for the movie."
+  177  git add .
+  178  git commit -m "Listen for 'input' events on poster url form input with callback function updatePosterPreview. Poster preview updates when a url is entered in the input"
+  179  git add .
+  180  git status
+  181  git commit -m "Added new placeholder-image-poster.png and fixed some css styling"
+  182  cd ~/repos/ajax-project
+  183  git status
+  184  git add .
+  185  git commit -m "Listen for 'submit' events on the poster review form. Put the form's input values into a new object. Add the nextReviewId to the object. Add the nextReviewId to the object. Prepend the new object to the entries in the data model.  Reset the image preview's `src' attribute. Reset the form inputs."
+  186  git commit -m "Listen for submit events on the poster review form. Put the form's input values into a new object. Add the nextReviewId to the object. Add the nextReviewId to the object. Prepend the new object to the entries in the data model.  Reset the image preview's src attribute. Reset the form inputs."
+  187  git add .
+  188  git commit -m " commit -m "Verify that new entries are saved to local storage along with the rest of the data model on page reload.  Verify that each new entry receives an incrementing reviewId."
+  189  git commit -m "Verify that new entries are saved to local storage along with the rest of the data model on page reload.  Verify that each new entry receives an incrementing reviewId."
+  190  git add .
+  191  git commit -m "Added Post anchor to nav bar. Defined functions resetSearchBar and removeSearchResults"
+  192  git add .
+  193  git commit -m "Update the view swapping function. Clicking on the Post anchor should make the Create Review view appear. Refreshing the page should let the user stay on the same page"
+  194  git push origin issue-2-post-review
+  195  git add .
+  196  git commit -m "Revised setStarRating() function, set a custom attribute (data-star) on each star icon to denote the star rating. Used for loop to set the stars as solid or empty"
+  197  git push origin issue-2-post-review
+  198  git status
+  199  git switch master
+  200  git pull origin master
+  201  git branch --list
+  202  git branch issue-2-view-review
+  203  git branch -m issue-2-view-review issue-3-view-review
+  204  git branch --list
+  205  git switch issue-3-view-review
+  206  git status
+  207  git add .
+  208  git commit -m "Fixed some margins on styles.css"
+  209  git status
+  210  git add .
+  211  git commit -m "Add a sibling div[data-view="reviews"] to the HTML.Add an empty unordered list to the div[data-view="reviews"] element in the HTML."
+  212  git add .
+  213  git commit -m "Add an empty unordered list to the div[data-view="reviews"] element in the HTML. Add some dummy journal entries to the unordered list in the HTML and style them to match the wireframe."
+  214  git status
+  215  git add .
+  216  git commit -m "Added REVIEWS nav item"
+  217  cd ~/repos/ajax-project
+  218  git status
+  219  git add .
+  220  git commit -m "Fixed spacing on nav bar anchors. Define a function that takes a single movie review object and returns a DOM tree that matches one of the example reviews in the HTML."
+  221  git add .
+  222  git commit -m "Use a loop to create a DOM tree for each review in the data model and append it to the page when the 'DOMContentLoaded' event is fired."
+  223  git add .
+  224  git commit -m "Used data.reviews.starRating property to set star rating on review listings. Removed dummy HTML"
+  225  git add .
+  226  git commit -m "Ensure that submitting a new review also creates a new DOM tree for it and adds it to the page. Ensure that submitting a new review automatically shows the 'reviews' view without reloading the page."
+  227  git add .
+  228  git commit -m "Updated swapViewNav, swapView, and showSameView functions"
+  229  git add .
+  230  git commit -m "Removed CSS properties with no effect"
+  231  git status
+  232  git add .
+  233  git commit -m "Added statement to hide no-reviews-msg when submit is clicked"
+  234  git push origin issue-3-view-review
+  235  git add .
+  236  git commit -m "Removed commented code"
+  237  git push origin master
+  238  git push origin issue-3-view-review
+  239  git switch master
+  240  git pull origin master
+  241  git branch issue-4-edit-review
+  242  git switch issue-4-edit-review
+  243  git add .
+  244  git status
+  245  git commit -m "Update review rendering function to include an edit icon for each rendered review."
+  246  git add .
+  247  git commit -m "Ensure that each rendered review is given a data-review-id attribute indicating which review it is."
+  248  git add .
+  249  git commmit -m "Show the review form if an edit icon is clicked"
+  250  git commit -m "Show the review form if an edit icon is clicked"
+  251  git add .
+  252  git commit -m "Show the review form if an edit icon is clicked.Pre-populate the review form with the clicked review's values from the object found in the data model."
+  253  git add .
+  254  git commit -m "Update the review form's submit handler function to conditionally add a new entry object or update the existing one. Update the review form's submit handler function to conditionally add a new review DOM tree or replace the existing one."
+  255  git status
+  256  git push origin issue-4-edit-review
+  257  ~cd/repos/ajax-project
+  258  cd ~/repos/ajax-project
+  259  git status
+  260  git switch master
+  261  git pull origin master
+  262  git branch issue-5-delete-review
+  263  git --list
+  264  git branch --list
+  265  cd ~/repos/c0122-code-solutions
+  266  git status
+  267  git pull origin master
+  268  cd
+  269  cd ~/repos/ajax-project
+  270  git switch issue-5-delete-review
+  271  git add .
+  272  git commit -m "Add a click target for deleting a review to the review form that only appears if the user is editing an review."
+  273  git add .
+  274  git commit -m "Set delete-button's class as visibilit-hidden when swapping views through nav-items and when submitting the review-form"
+  275  git add .
+  276  git commit -m "Show a confirmation modal when the user clicks the Delete click target."
+  277  git add .
+  278  git commit -m "Hide the modal if the user clicks Cancel."
+  279  git add .
+  280  git commit -m "Remove the review from the data model and the entry's DOM tree from the page if the user clicks Delete. Show the Reviews list if the user clicks Delete."
+  281  git push origin issue-5-delete-review
+  282  cd ~repos/ajax-project
+  283  cd ~/repos/ajax-project
+  284  git status
+  285  git switch master
+  286  git pull origin master
+  287  git branch code-cleanup
+  288  git switch code-cleanup
+  289  git status
+  290  git add .
+  291  git commit -m "Files and directory names have been changed to lower-kebab-casing"
+  292  git status
+  293  git add .
+  294  git commit -m "CSS cleanup: All CSS class names are lower-kebab-cased. Removed all unused CSS-rule-sets and declarations. Removed all commented out code"
+  295  git status
+  296  git add .
+  297  git commit -m "JavaScript cleanup: Removed all alert()'s, debugger statements, console.log()'s, pseudo-code comments, and commented out code"
+  298  git push origin code-cleanup
+  299  git switch master
+  300  git pull origin master
+  301  git branch user-interfaces
+  302  git switch user-interfaces
+  303  git add .
+  304  git commit -m "Tablet Portrait Orientation: Increased font-size for buttons"
+  305  git push origin user-interfaces
+  306  git switch master
+  307  git pull origin master
+  308  git status
+  309  git add .
+  310  git commit -m "Fixes: Review form's heading is reset to show New Review when navigating out of form-view. In editReview() function, star-rating's data-star attibute is set to data.editing.starRating"
+  311  git push origin master
+  312  git pull origin master
+  313  git branch project-polish
+  314  git switch master
+  315  cd
+  316  cd ~/repos/ajax-project
+  317  git remote set-url origin git@github.com:ellie-hwang/movii.git
+  318  cd ~/repos
+  319  mv ajax-project movii
+  320  cd ~/repos/ajax-project
+  321  cd ~/repos/movii
+  322  git switch project-polish
+  323  git status
+  324  git add .
+  325  git commit -m "Updated title to MovII"
+  326  git status
+  327  git add .
+  328  git commit -m "Updated favicon. Added metatags to make web app shareable on social media"
+  329  git push origin project-polish
+  330  git push origin master
+  331  git status
+  332  git switch master
+  333  git pull origin master
+  334  git switch master
+  335  git status
+  336  git add .
+  337  git commit =m "Made meta description longer"
+  338  git commit -m "Made meta description longer"
+  339  git push origin master
+  340  git add .
+  341  git commit -m "Shortened description in meta tag's og:description property"
+  342  git push origin master
+  343  git status
+  344  git add .
+  345  cd ~/repos/movii
+  346  git status
+  347  git add .
+  348  git commit -m "Changed API calls to use https instead of http"
+  349  git push origin movii
+  350  git push origin master
+  351  cd ~/repos
+  352  git clone git@github.com:ellie-hwang/python-practice.git
+  353  cd python-practice
+  354  npm ci
+  355  git status
+  356  git add .
+  357  git commit -m "Printed Hello World"
+  358  git push origin master
+  359  git push origin
+  360  cd ~/repos/algorithm-practice
+  361  git branch --list
+  362  git status
+  363  git add .
+  364  git commit -m "Completed make-array-consecutive"
+  365  git push origin master
+  366  git status
+  367  git add .
+  368  git push origin master
+  369  cd ~/repos
+  370  git clone git@github.com:ellie-hwang/javascript-practice.git
+  371  cd javascript-practice
+  372  git status
+  373  git add .
+  374  git commit -m "Completed color-flipper"
+  375  git push origin master
+  376  git status
+  377  git add .
+  378  git commit -m "Completed counter"
+  379  git push origin master
+  380  cd ~/repos/c0122-code-solutions
+  381  git pull origin master
+  382  cd ~/repos/algorithm-practice
+  383  git status
+  384  git add .
+  385  git commit -m "Completed add-two-digits"
+  386  git push origin master
+  387  git add .
+  388  git commit -m "Completed largest-number"
+  389  git push origin master
+  390  git status
+  391  git add .
+  392  git commit -m "Completed candies"
+  393  git push origin master
+  394  git add .
+  395  git commit -m "Completed seats-in-theater"
+  396  git push origin master
+  397  git add .
+  398  git commit -m "Completed max-mulitple"
+  399  git push origin master
+  400  git status
+  401  git add 
+  402  git add .
+  403  git commit -m "Completed circle-of-numbers"
+  404  git push origin master
+  405  git status
+  406  git add .
+  407  git commit -m "Completed late-ride"
+  408  git push origin master
+  409  cd ~/repos/javascript-practice
+  410  git status
+  411  git add .
+  412  git commit -m "Rreviews: added h2 and div
+  413  git commit -m "Rreviews: added h2 and div
+  414  git commit -m "Reviews: added h2 and div"
+  415  git add .
+  416  git commit -m "Reviews: added img container and img"
+  417  git add .
+  418  git commite -m "Reviews: added p job info"
+  419  git commit -m "Reviews: added p job info"
+  420  git add .
+  421  git commite -m "Reviews: added left and right buttons"
+  422  git commit -m "Reviews: added left and right buttons"
+  423  git push origin master
+  424  git add .
+  425  git commit -m "Reviews: queried for html elementsa and buttons"
+  426  git add .
+  427  git commit -m "Reviews: set textContent for html elements"
+  428  git push origin master
+  429  git add .
+  430  git commit -m "Reviews: defined showPerson function"
+  431  git add .
+  432  git commit -m "Reviews: added event listeners for next and previous buttons"
+  433  git add .
+  434  git commit -m "Reviews: added conditions for call back functions for button click listeners"
+  435  git push origin master
+  436  git add .
+  437  git commit -m "Completed Reviews"
+  438  git push origin master
+  439  cd ~/repos/c0122-code-solutions
+  440  git pull origin master
+  441  git branch es6-const-let
+  442  git switch es6-const-let
+  443  git status
+  444  git add .
+  445  git commit -m "Completed es6-const-let"
+  446  git push origin master
+  447  git push origin es6-const-let
+  448  git switch master
+  449  git pull origin master
+  450  git branch es6-template-literals
+  451  git switch es6-template-literals
+  452  git status
+  453  git add .
+  454  git commit -m "Completed es6-template-literals"
+  455  git push origin es6-template-literals
+  456  git add .
+  457  git status
+  458  git commit -m "Destructure book1 and book2"
+  459  git add .
+  460  git commit -m "Completed es6-template-literals"
+  461  git push origin es6-template-literals
+  462  git status
+  463  git switch master
+  464  git pull origin master
+  465  git branch es6-destructuring
+  466  git pull origin master
+  467  git status
+  468  git add .
+  469  git commit -m "Accidentally made index.html in another branch"
+  470  git status
+  471  git add .
+  472  git commit -m "Completed es6-destructuring"
+  473  git reset --soft HEAD~1
+  474  git status
+  475  git push origin master
+  476  git status
+  477  git pull origin master
+  478  git status
+  479  git rm es6-destructuring/index.html
+  480  git status
+  481  git branch es6-destructuring
+  482  git switch es6-destructuring
+  483  git status
+  484  git push origin es6-destructuring
+  485  git status
+  486  git pull origin es6-destructuring
+  487  git status
+  488  git add .
+  489  git commit -m "Completed es6-destructuring"
+  490  git push origin es6-destructuring
+  491  git status
+  492  git switch master
+  493  git status
+  494  git switch es6-template-literals
+  495  git status
+  496  git pull origin es6-template-literals
+  497  git status
+  498  git pull origin es6-template-literals
+  499  git status
+  500  git add .
+  501  git commit -m "Completed es6-destructuring"
+  502  git push origin es6-destructuring
+  503  git switch es6-template-literals
+  504  git switch es6-destructuring
+  505  git switch es6-template-literals
+  506  git log
+  507  git reset --soft HEAD~5
+  508  git log
+  509  git status
+  510  git rm es6-destructuring
+  511  git -rm es6-destructuring
+  512  git status
+  513  git rm es6-destructuring/.eslintrc
+  514  git rm es6-destructuring/.gitkeep
+  515  git rm es6-destructuring/.npmrc
+  516  git rm es6-destructuring/index.html
+  517  git status
+  518  git pull origin master
+  519  git status
+  520  git switch es6-destructuring
+  521  git switch master
+  522  git -log
+  523  git log
+  524  git reset --soft HEAD~1
+  525  git status
+  526  git log
+  527  git reset --soft HEAD~1
+  528  git status
+  529  git push origin master
+  530  git pull origin master
+  531  git status
+  532  git log
+  533  git switch es6-destructuring
+  534  git switch master
+  535  git status
+  536  git branch -d es6-destructuring
+  537  git branch -D es6-destructuring
+  538  git push origin --delete es6-destructuring
+  539  git status
+  540  git log
+  541  git revert 8857e91403ebfe83f762bebdee6bfb2bf4fcac93
+  542  cd ~/repos/c0122-code-solutions
+  543  git log
+  544  git revert 8857e91403ebfe83f762bebdee6bfb2bf4fcac93
+  545  git status
+  546  git rm es6-destructuring
+  547  git rm es6-destructuring/.eslintrc
+  548  git restore --staged es6-destructuring/.eslintrc
+  549  git restore --staged es6-destructuring/.gitkeep
+  550  git restore --staged es6-destructuring/.npmrc
+  551  git status
+  552  git rm es6-destructuring
+  553  git rm es6-destructuring/
+  554  git rm -r es6-destructuring
+  555  git rm -r es6-destructuring/
+  556  git branch --list
+  557  git status
+  558  git revert 8857e91403ebfe83f762bebdee6bfb2bf4fcac93
+  559  git revert a11f6b81fa018768383d7e36b93e888a12f2abde
+  560  git status
+  561  git push origin master
+  562  git log
+  563  git pull origin master
+  564  git branch es6-destructuring
+  565  git switch es6-destructuring
+  566  git switch master
+  567  git rm -r es6-destructuring
+  568  git push origin master
+  569  git rm -r --cached es6-destructuring
+  570  git status
+  571  git rm -r es6-destructuring
+  572  git restore --staged es6-destructuring/.eslintrc
+  573  git restore --staged es6-destructuring/.gitkeep
+  574  git restore --staged es6-destructuring/.npmrc
+  575  git restore --staged es6-destructuring/index.html
+  576  git status
+  577  git rm -r es6-destructuring
+  578  git status
+  579  git pull origin master
+  580  git branch -d es6-destructuring
+  581  git push origin --delete es6-destructuring
+  582  git status
+  583  git pull origin master
+  584  git branch es6-destructuring
+  585  git switch es6-destructuring
+  586  git status
+  587  git add .
+  588  git commit -m "Completed es6-destructuring"
+  589  git push origin es6-destructuring
+  590  git switch master
+  591  git branch es6-arrow-function
+  592  git switch es6-arrow-function
+  593  git add .
+  594  git commit -m "Completed es6-arrow-functions"
+  595  git push origin es6-arrow-function
+  596  git switch master
+  597  git switch es6-arrow-function
+  598  git status
+  599  git switch master
+  600  cd ~/repos/c0122-code-solutions
+  601  git branch --list
+  602  git switch es6-arrow-function
+  603  git branch -m es6-arrow-functions
+  604  git push origin :es6-arrow-function es6-arrow-functions
+  605  git push origin -u es6-arrow-functions
+  606  git branch --list
+  607  cd
+  608  git cd ~/repos/javascript-practice
+  609  cd ~/repos/javascript-practice
+  610  cd
+  611  cd ~/repos/c0122-code-solutions
+  612  git status
+  613  git add .
+  614  git commit -m "Assigned this to another variable within the tellJoke method and laugh method"
+  615  git push origin es6-arrow-functions
+  616  git switch master
+  617  cd ~/repos/c0122-code-solutions
+  618  git switch es6-arrow-functions
+  619  git status
+  620  git switch master
+  621  git branch command-line-basics
+  622  git switch command-line-basics
+  623  git status
+  624  pwd
+  625  c
+  626  clear
+  627  pwd
+  628  man man
+  629  man cat
+  630  cat laziness.txt
+  631  cat hubris.txt
+  632  git status
+  633  git add .
+  634  git commit -m "Added starter file"
+  635  cat laziness.txt
+  636  clear
+  637  man cat
+  638  cat -A -show-all laziness.txt
+  639  cat command-line-basics/laziness.txt
+  640  cd ~/repos/c0122-code-solutions/command-line-basics
+  641  cat hubris.txt
+  642  cat impatience.txt
+  643  cat laziness.txt hubris.txt impatience.txt
+  644  clear
+  645  man cat
+  646  cat laziness.txt
+  647* cat impatience.txt 
+  648  cat hubris.txt
+  649  cat laziness.txt impatience.txt hubris.txt
+  650  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  651  man ls
+  652  ls -a
+  653  ls -F
+  654  man ls
+  655  ls lfz-staff
+  656  ls lfz-staff/
+  657  ls -a lfz-staff
+  658  ls -a lfz-staff/
+  659  ls -F lfz-staff/
+  660  ls -aF lfz-staff > lfz-staff/contents.txt
+  661  cat lfz-staff/contents.txt
+  662  man pwd
+  663  pwd
+  664  pwd > i-was-here.txt
+  665  ls
+  666  cat i-was-here.txt
+  667  man echo
+  668  echo 'Hello, World!'
+  669  echo 'Hello, World!' > hello.txt
+  670  ls
+  671  ls -a
+  672  ls -F
+  673  cat hello.txt
+  674  man touch
+  675  touch tag-youre-it.txt
+  676  touch snoot/boop.txt
+  677  ls snoot/
+  678  ls -F snoot/
+  679  man mkdir
+  680  mkdir parent
+  681  ls
+  682  man mkdir
+  683  mkdir -p parent/child
+  684  mkdir -p parent/child/grandchild
+  685  touch parent/child/grandchild/.gitkeep
+  686  ls -a
+  687  ls -a parent/
+  688  ls -a parent/child/grandchild/
+  689  git add .
+  690  git commit -m "Added parent > child > grandchild directory. Added boop.txt to snoot dir. Added three-virtues.txt, hello.txt, i-was-here.txt, and tag-youre-it.txt"
+  691  cat mv
+  692  man mv
+  693  mv pokiemans pokemon
+  694  man rm
+  695  rm lol.txt
+  696  ls
+  697  rm -r kill-me/
+  698  man cp
+  699  cp and-then.txt no-and-then.txt
+  700  ls
+  701  ls -F
+  702  cat and-then.txt no-and-then.txt
+  703  man history
+  704  history
+  705  history > command-history.txt
