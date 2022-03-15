@@ -3,16 +3,17 @@ const $flashImage = document.querySelector('#flash-image');
 const $jokeForm = document.querySelector('#joke-form');
 
 const jokester = {
-  tellJoke: (setup, punchline) => {
+  tellJoke: function (setup, punchline) {
     $jokeForm.classList.add('d-none');
-    const $introStatement = jokester.renderJokePhrase('Hey Flash...');
-    jokester.appendJokePhrase($introStatement);
+    const this_ = this;
+    const $introStatement = this_.renderJokePhrase('Hey Flash...');
+    this_.appendJokePhrase($introStatement);
     setTimeout(function () {
-      const $jokeSetup = jokester.renderJokePhrase(setup);
-      jokester.appendJokePhrase($jokeSetup);
+      const $jokeSetup = this_.renderJokePhrase(setup);
+      this_.appendJokePhrase($jokeSetup);
       setTimeout(function () {
-        const $jokePunchline = jokester.renderJokePhrase(punchline);
-        jokester.appendJokePhrase($jokePunchline);
+        const $jokePunchline = this_.renderJokePhrase(punchline);
+        this_.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
@@ -31,8 +32,9 @@ const jokester = {
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
   laugh: function () {
+    const this_ = this;
     setTimeout(function () {
-      $flashImage.setAttribute('src', flash.laughingUrl);
+      $flashImage.setAttribute('src', this_.laughingUrl);
     }, 3000);
   }
 };
