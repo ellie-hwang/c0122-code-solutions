@@ -1,7 +1,7 @@
 const JSONdata = require('./data.json');
 const fs = require('fs');
 
-module.exports.readNotes = function readNotes() {
+module.exports.read = () => {
   fs.readFile('data.json', 'utf8', (err, data) => {
     if (err) throw err;
     const notes = JSONdata.notes;
@@ -9,5 +9,4 @@ module.exports.readNotes = function readNotes() {
       console.log(`${id}: ${notes[id]}`);
     }
   });
-
 };
