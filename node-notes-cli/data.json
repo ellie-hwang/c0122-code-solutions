@@ -1,10 +1,10 @@
 {
-  "nextId": 10,
+  "nextId": 7,
   "notes": {
-    "4": "A closure is formed when a function retains access to variables in its lexical scope.",
-    "5": "I can't believe this worked",
-    "6": "Testing if the id is incrementing",
-    "7": "The answer is no",
-    "9": "Do you pronounce the L in salmon?"
+    "1": "A closure is formed when a function retains access to variables in its lexical scope.",
+    "2": "I can't believe this worked",
+    "3": "Testing if the id is incrementing",
+    "5": "I've got a banana and i'm not afraid to use it!",
+    "6": "I'm out of peanut butter"
   }
 }
