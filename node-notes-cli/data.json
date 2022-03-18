@@ -1,0 +1,10 @@
+{
+  "nextId": 6,
+  "notes": {
+    "1": "A closure is formed when a function retains access to variables in its lexical scope.",
+    "2": "I can't believe this worked",
+    "3": "Testing if the id is incrementing",
+    "4": "I've got a banana and i'm not afraid to use it!",
+    "5": "I'm out of peanut butter"
+  }
+}
