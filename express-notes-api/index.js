@@ -28,9 +28,15 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/api/notes/:id', (req, res) => {
-  // const notes = JSONdata.notes;
-  if (!parseInt(req.params.id) === true) {
+  const notes = JSONdata.notes;
+  const notesId = req.params.id;
+  if (!parseInt(notesId) === true) {
     const errorObj = { error: 'id must be a positive integer' };
     res.status(400).send(errorObj);
+  } else if (notes[notesId] !== undefined) {
+    res.json(notes[notesId]);
+  } else {
+    const errorObj = { error: 'cannot find note with id ' + notesId };
+    res.status(404).send(errorObj);
   }
 });
