@@ -55,14 +55,18 @@ app.post('/api/notes', (req, res) => {
       id: nextId,
       content: req.body.content
     };
-    res.status(201).send(notes[nextId]);
-    JSONdata.nextId++;
+    // res.status(201).send(notes[nextId]);
+    // JSONdata.nextId++;
     const newJSONdata = JSON.stringify(JSONdata, null, 2);
     fs.writeFile('data.json', newJSONdata, 'utf8', err => {
       if (err) {
         console.error(err);
+        const errorObj2 = { error: 'An unexpected error occurred.' };
+        res.status(500).send(errorObj2);
         process.exit(1);
       }
+      res.status(201).send(notes[nextId]);
+      JSONdata.nextId++;
     });
   }
 });
