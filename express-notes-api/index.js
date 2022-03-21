@@ -47,17 +47,22 @@ app.get('/api/notes/:id', (req, res) => {
 app.post('/api/notes', (req, res) => {
   const notes = JSONdata.notes;
   const nextId = JSONdata.nextId;
-  JSONdata.notes[nextId] = {
-    id: nextId,
-    content: req.body.content
-  };
-  res.status(201).send(notes[nextId]);
-  JSONdata.nextId++;
-  const newJSONdata = JSON.stringify(JSONdata, null, 2);
-  fs.writeFile('data.json', newJSONdata, 'utf8', err => {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-  });
+  if (req.body === {} || req.body.content === undefined || req.body.content === '') {
+    const errorObj = { error: 'content is a required field' };
+    res.status(400).send(errorObj);
+  } else if (req.body.content !== undefined) {
+    JSONdata.notes[nextId] = {
+      id: nextId,
+      content: req.body.content
+    };
+    res.status(201).send(notes[nextId]);
+    JSONdata.nextId++;
+    const newJSONdata = JSON.stringify(JSONdata, null, 2);
+    fs.writeFile('data.json', newJSONdata, 'utf8', err => {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
+    });
+  }
 });
