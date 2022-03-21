@@ -12,6 +12,7 @@ const jsonParse = express.json();
 
 app.use('/api/notes', jsonParse);
 
+// read all entries
 app.get('/api/notes', (req, res) => {
   const gradesArray = [];
   fs.readFile('data.json', 'utf8', (err, data) => {
@@ -27,6 +28,7 @@ app.get('/api/notes', (req, res) => {
   });
 });
 
+// read single entry by id
 app.get('/api/notes/:id', (req, res) => {
   const notes = JSONdata.notes;
   const notesId = req.params.id;
@@ -39,4 +41,23 @@ app.get('/api/notes/:id', (req, res) => {
     const errorObj = { error: 'cannot find note with id ' + notesId };
     res.status(404).send(errorObj);
   }
+});
+
+// create an entry
+app.post('/api/notes', (req, res) => {
+  const notes = JSONdata.notes;
+  const nextId = JSONdata.nextId;
+  JSONdata.notes[nextId] = {
+    id: nextId,
+    content: req.body.content
+  };
+  res.status(201).send(notes[nextId]);
+  JSONdata.nextId++;
+  const newJSONdata = JSON.stringify(JSONdata, null, 2);
+  fs.writeFile('data.json', newJSONdata, 'utf8', err => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+  });
 });
