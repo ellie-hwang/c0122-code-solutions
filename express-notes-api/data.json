@@ -1,0 +1,33 @@
+{
+  "nextId": 17,
+  "notes": {
+    "5": {
+      "id": 5,
+      "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
+    },
+    "6": {
+      "id": 6,
+      "content": "A closure is formed when a function retains access to variables in its lexical scope."
+    },
+    "11": {
+      "id": 11,
+      "content": "Here goes nothing"
+    },
+    "12": {
+      "id": 12,
+      "content": "Peanut butter and jelly sandwiches"
+    },
+    "13": {
+      "id": 13,
+      "content": "This took a looooong time"
+    },
+    "14": {
+      "id": 14,
+      "content": "Finally it has been completed"
+    },
+    "16": {
+      "id": 16,
+      "content": "Everything seems to be in working order"
+    }
+  }
+}
