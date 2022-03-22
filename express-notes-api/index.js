@@ -15,16 +15,16 @@ app.use('/api/notes', jsonParse);
 // read all entries
 app.get('/api/notes', (req, res) => {
   const notesArray = [];
-  fs.readFile('data.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    for (const id in JSONdata.notes) {
-      notesArray.push(JSONdata.notes[id]);
-    }
-    res.json(notesArray);
-  });
+  // fs.readFile('data.json', 'utf8', (err, data) => {
+  //   if (err) {
+  //     console.error(err);
+  //     process.exit(1);
+  //   }
+  for (const id in JSONdata.notes) {
+    notesArray.push(JSONdata.notes[id]);
+  }
+  res.json(notesArray);
+  // });
 });
 
 // read single entry by id
