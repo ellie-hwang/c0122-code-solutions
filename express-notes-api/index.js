@@ -15,16 +15,10 @@ app.use('/api/notes', jsonParse);
 // read all entries
 app.get('/api/notes', (req, res) => {
   const notesArray = [];
-  // fs.readFile('data.json', 'utf8', (err, data) => {
-  //   if (err) {
-  //     console.error(err);
-  //     process.exit(1);
-  //   }
   for (const id in JSONdata.notes) {
     notesArray.push(JSONdata.notes[id]);
   }
   res.json(notesArray);
-  // });
 });
 
 // read single entry by id
@@ -59,9 +53,9 @@ app.post('/api/notes', (req, res) => {
         console.error(err);
         const errorObj = { error: 'An unexpected error occurred.' };
         res.status(500).send(errorObj);
-        process.exit(1);
+      } else {
+        res.status(201).send(JSONdata.notes[id]);
       }
-      res.status(201).send(JSONdata.notes[id]);
     });
   }
 });
@@ -83,9 +77,9 @@ app.delete('/api/notes/:id', (req, res) => {
         console.error(err);
         const errorObj = { error: 'An unexpected error occurred.' };
         res.status(500).send(errorObj);
-        process.exit(1);
+      } else {
+        res.sendStatus(204);
       }
-      res.sendStatus(204);
     });
   }
 });
@@ -110,9 +104,9 @@ app.put('/api/notes/:id', (req, res) => {
         console.error(err);
         const errorObj = { error: 'An unexpected error occurred.' };
         res.status(500).send(errorObj);
-        process.exit(1);
+      } else {
+        res.status(200).send(JSONdata.notes[notesId]);
       }
-      res.status(200).send(JSONdata.notes[notesId]);
     });
   }
 });
