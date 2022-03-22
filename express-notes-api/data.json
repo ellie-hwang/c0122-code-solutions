@@ -1,5 +1,5 @@
 {
-  "nextId": 12,
+  "nextId": 15,
   "notes": {
     "5": {
       "id": 5,
@@ -12,6 +12,18 @@
     "11": {
       "id": 11,
       "content": "Here goes nothing"
+    },
+    "12": {
+      "id": 12,
+      "content": "Peanut butter and jelly sandwiches"
+    },
+    "13": {
+      "id": 13,
+      "content": "This took a looooong time"
+    },
+    "14": {
+      "id": 14,
+      "content": "Finally it has been completed"
     }
   }
 }
