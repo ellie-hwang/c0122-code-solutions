@@ -1,8 +1,4 @@
-class ExampleClass {
-  constructor(className) {
-    this.className = className;
-  }
-}
+class ExampleClass {}
 
 const example = new ExampleClass();
 
