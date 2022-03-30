@@ -19,7 +19,7 @@ class CustomButton extends React.Component {
       );
     } else {
       return (
-        <button onClick = {this.handleClick}>{this.props.text}</button>
+        <button onClick = {this.handleClick}>Click Me!</button>
       );
     }
   }
@@ -27,7 +27,7 @@ class CustomButton extends React.Component {
 
 const element = (
   <div>
-    <CustomButton text="Click Me!" />
+    <CustomButton />
   </div>
 );
 
