@@ -1,0 +1,6 @@
+#watchface {
+  height: 150px;
+  width: 150px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
