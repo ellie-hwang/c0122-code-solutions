@@ -10,6 +10,7 @@ class StopWatch extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.tick = this.tick.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   tick() {
@@ -19,7 +20,6 @@ class StopWatch extends React.Component {
           this.setState({
             secondsElapsed: this.state.secondsElapsed + 1
           });
-          // console.log(this.state.secondsElapsed);
         }, 1000)
       });
     } else if (this.state.isTicking === false) {
@@ -28,28 +28,31 @@ class StopWatch extends React.Component {
   }
 
   handleClick() {
+    const newState = !this.state.isTicking;
     this.setState({
-      isTicking: !this.state.isTicking
-    });
-    // console.log('This should be true: ', this.state.isTicking);
-    this.tick();
+      isTicking: newState
+    }, this.tick);
+  }
+
+  reset() {
+    if (this.state.isTicking === false) {
+      this.setState({
+        secondsElapsed: 0
+      });
+    }
   }
 
   render() {
     const icon = this.state.isTicking ? 'fas fa-pause' : 'fas fa-play';
     return (
-      <div>
-        <div id="watchface"></div>
-        <i onClick={this.handleClick} className={icon} />
+      <div className="row">
+        <div id="watchface" onClick={this.reset}>
+          <p>{this.state.secondsElapsed}</p>
+        </div>
+        <div id="icon-container">
+          <i onClick={this.handleClick} className={icon} />
+        </div>
       </div>
-      // <div
-      //   onClick={this.handleClick}
-      //   className={`toggle-switch ${modifierClass}`}>
-      //   <div className="slider">
-      //     <div className="switch"></div>
-      //   </div>
-      //   <span className="state-label">{label}</span>
-      // </div>
     );
   }
 }

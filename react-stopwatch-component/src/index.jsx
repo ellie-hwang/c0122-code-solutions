@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import StopWatch from './stopwatch';
 
-ReactDOM.render(
-  <StopWatch />,
-  document.querySelector('#root')
-);
+const root = ReactDOMClient.createRoot(document.querySelector('#root'));
+root.render(<StopWatch />);
