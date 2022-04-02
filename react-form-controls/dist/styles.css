@@ -1,0 +1,28 @@
+form {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+label {
+  font-size: 1.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-right: 0.2em;
+}
+
+input {
+  size: 30;
+  font-size: 1em;
+  padding: 0.2em;
+  margin-right: 0.5em;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid rgb(41 166 250);
+  box-shadow: 0 0 5px rgb(41 166 250);
+}
+
+button {
+  padding: 0.2em;
+  font-size: 1em;
+}
