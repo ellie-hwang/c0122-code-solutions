@@ -49,12 +49,19 @@ class Accordion extends React.Component {
 
   handleClick(event) {
     if (event.target.getAttribute('topic') === this.state.topic) {
-      const newDisplay = 'false';
+      const newDisplay = false;
       this.setState({
         display: newDisplay
       }, this.hideDetails);
-    } else if (event.target.getAttribute('topic') !== this.state.topic) {
-      const newDisplay = 'true';
+    } else if (event.target.getAttribute('topic') !== this.state.topic && this.state.display === false) {
+      const newDisplay = true;
+      this.setState({
+        topic: event.target.getAttribute('topic'),
+        display: newDisplay
+      }, this.showDetails);
+    } else if (event.target.getAttribute('topic') !== this.state.topic && this.state.display === true) {
+      const newDisplay = true;
+      this.hideDetails();
       this.setState({
         topic: event.target.getAttribute('topic'),
         display: newDisplay
