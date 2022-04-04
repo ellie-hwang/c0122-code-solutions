@@ -7,20 +7,6 @@ class AppDrawer extends React.Component {
       display: false
     };
     this.handleClick = this.handleClick.bind(this);
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
-  }
-
-  showMenu() {
-    document.querySelector('.menu').style.width = '20%';
-    document.querySelector('.black-bg').style.visibility = 'visible';
-    document.querySelector('.black-bg').style.opacity = '0.7';
-  }
-
-  hideMenu() {
-    document.querySelector('.menu').style.width = '0';
-    document.querySelector('.black-bg').style.opacity = '0';
-    document.querySelector('.black-bg').style.visibility = 'hidden';
   }
 
   handleClick(event) {
@@ -28,24 +14,26 @@ class AppDrawer extends React.Component {
       const newState = true;
       this.setState({
         display: newState
-      }, this.showMenu);
+      });
     } else if (event.target.matches('.menu-item') || event.target.matches('.black-bg')) {
       const newState = false;
       this.setState({
         display: newState
-      }, this.hideMenu);
+      });
     }
   }
 
   render() {
+    const bgVisible = this.state.display ? 'bg-visible' : '';
+    const menuVisible = this.state.display ? 'menu-visible' : '';
     return (
       <div className="row">
         <div className="icon-container">
           <i id="menu-icon" className="fas fa-bars" onClick={this.handleClick}></i>
         </div>
-        <div id="black-bg" className="black-bg" onClick={this.handleClick}>
+        <div id="black-bg" className={`black-bg ${bgVisible}`} onClick={this.handleClick}>
         </div>
-        <div className="menu" onClick={this.handleClick}>
+        <div className={`menu ${menuVisible}`} onClick={this.handleClick}>
           <p className="menu-header">Explore Bikini Bottom</p>
           <a className="menu-item" href="#">Spongebob&apos;s House</a>
           <a className="menu-item" href="#">Patrick&apos;s Rock</a>
