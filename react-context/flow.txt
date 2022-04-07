@@ -1,0 +1,67 @@
+User can sign in
+	- In index.js, the App react component is created with a constructor and rendered onto the browser page (client side)
+	- When App react component is rendered, the Navbar and PageContainer components are also rendered.
+	- After the first render, windoww.location.hash is #sign-in and the Auth component is rendered. The Auth component
+	describes the HTML for the sign-in page. **componenDidMount method is called after 1st render.
+	- When the Auth component is rendered, the AuthForm component is also rendered with key and action values as "sign-in" and an
+	"onSignIn" property with a callback function of handleSignIn (provided by AppContext provider in app.jsx)
+	- When the AuthForm component renders the sign-in form that includes the Username input, Password input, and "Register now"
+	message
+	- When the input value's change, the handleChange(event) method is called and a rerender is scheduled due to a statechange
+	- When the form is submited, the handleSubmit(event) method is called and a rerender is scheduled due to a statechange
+	- The handlesSubmit function call defines a req object with POST method, then a fetch request is made with the taarget as /api/autho/sign-in.
+	- The server receives the http request sent through fetch, and the app.post('api/auth/sign-in') function handles the
+	http request.
+	- The server send a request to the database with a sql query asking for the database row containing the username and password
+	specifide in the request body.
+	- If that record does not exist, the server sends a 401 error to the client. If the record exist, the argon2.verify method
+	returns whether the user's hashedPassword (stored in database) matches the provide password in the req.body.
+	- If the passwords match, a token is created and returned inside a json object along with the payload object (contains
+	userId, username) to the client.
+	- Any errors that occur are caught and handed over to express to handle.
+	- Back to the fetch request > once the res.json object is received from the server, if the user and token values exist
+	, the handleSignIn method of the App component class is called with the res.json object as the argument.
+	- When the handleSignIn method is called, the token is stored in localStorage and the state.user property is set
+	with the value of the user property of the res.json object
+	- Since there is a state change, the App component is rerendered
+	- Now we have a user value (from state), route: "sign-in", isAuthorizing: false
+	- Since there is a user value now, when the Auth component is rendering (called from renderPage()), the Redirect component gets rendered.
+	- The Redirect component sets the window.location.hash to ''
+	- ???? // not sure how and when the route state get's set to '', but when it does, a rerender occurs
+	- When the App component's render function is called, the renderPage() function gets called and returns the Home component which
+	renders the home page of the app.
+	- Client has successfully logged in
+
+User can sign in
+	-Client puts inputs in username and password field and clicks submit.
+		-When submit is clicked, client is sending POST request (target is /api/auth/sign-in) to server with username and password in request body.
+	-Server receives POST request and handles request by sending a query request (Select sql command) to Database for the record with
+	the username and password specified in the request body
+	-Database receives server's request for the record and sends back a record if it successfully finds one
+	-Server receives record or no record from Database. If server receives no record, a 401 error is thrown.
+	-If server receives record, it verifies that the password in req body and hashePassword from database record match
+	-If match, then Client receives token which is stored in local storage and user is authenticated. User can sign in
+	and is taken to home page
+
+User can sign up
+	-Client navigates to sign-up page (#sign-up)
+	-Client puts inputs in username and password field and clicks submit.
+		-When submit is clicked, client is sending POST request to (targe is /api/auth/sign-up) server with username and password is request body
+	-Server receives POST request and handles request by hashing the password value in he req body and sending a query request (Insert sql command) to Database to add a record
+	to the database with username and hashedPassword values
+	-Database receives server's request to insert record and creates a new record in the database with the username and hashedPassword
+	-Server receives the record back as a json object and sned client 201 status
+	-Client has successfully signed up
+
+User can stay signed in
+	-When client successfully signs in, state.route is set to '' and state.user is not null. User's token is stored in localsotrage
+	-Client is currently on homepage. Client refreshes.
+	-Server is listening for hash changes with EventListener on window object. Refreshing will not change window.location.hash
+	-Server checks that there is a user token in local storage, if there is, then client stays logged in and on same page
+
+User can sign out
+	-Client clicks sign out button, hash changes
+	-User's token is removed, state.user is set to null
+	-Server is listening to the hash change, Server sees there is no token, state is set to the null user and isAuthorizing to false
+	-Page is rerendered
+	-Client is taken to sign-in page
