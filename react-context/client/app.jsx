@@ -70,5 +70,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-App.contextType = AppContext;
