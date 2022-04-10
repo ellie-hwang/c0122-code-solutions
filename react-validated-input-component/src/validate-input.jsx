@@ -7,6 +7,15 @@ class ValidatedInput extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
+
+  render() {
+    return (
+      <div className="row">
+        <label htmlFor="password">Password</label>
+        <input type="text" name="password" id="password" />
+      </div>
+    );
+  }
 }
 
 export default ValidatedInput;
