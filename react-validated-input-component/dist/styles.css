@@ -31,6 +31,10 @@ i {
   color: red;
 }
 
+.fas.fa-check {
+  color: green;
+}
+
 .display-none {
   display: none;
 }
