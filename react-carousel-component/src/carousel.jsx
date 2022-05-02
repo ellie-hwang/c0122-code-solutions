@@ -1,39 +1,11 @@
 import React from 'react';
 
-const characters = [
-  {
-    id: 1,
-    name: 'Webber',
-    url: 'images/webber.jpg'
-  },
-  {
-    id: 2,
-    name: 'Wilson',
-    url: 'images/wilson.jpg'
-  },
-  {
-    id: 3,
-    name: 'Willow',
-    url: 'images/willow.jpg'
-  },
-  {
-    id: 4,
-    name: 'Wendy',
-    url: 'images/wendy.jpg'
-  },
-  {
-    id: 5,
-    name: 'Woody',
-    url: 'images/woody.jpg'
-  }
-];
-
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       activeImgId: 1,
-      characters: characters
+      characters: props.characters
     };
     this.handleClick = this.handleClick.bind(this);
     this.autoSwitchImg = this.autoSwitchImg.bind(this);
@@ -44,7 +16,7 @@ class Carousel extends React.Component {
   }
 
   autoSwitchImg() {
-    if (this.state.activeImgId === characters.length) {
+    if (this.state.activeImgId === this.state.characters.length) {
       this.setState({
         activeImgId: 1
       });
@@ -56,7 +28,7 @@ class Carousel extends React.Component {
   }
 
   handleClick(event) {
-    if ((this.state.activeImgId === characters.length) && (event.target.getAttribute('class') === 'fa-solid fa-angle-right')) {
+    if ((this.state.activeImgId === this.state.characters.length) && (event.target.getAttribute('class') === 'fa-solid fa-angle-right')) {
       this.setState({
         activeImgId: 1
       });
@@ -86,7 +58,7 @@ class Carousel extends React.Component {
 
   render() {
     const active = this.state.activeImgId ? '' : 'display-none';
-    const imgList = characters.map(character => {
+    const imgList = this.state.characters.map(character => {
       if (this.state.activeImgId === character.id) {
         return (
           <CharacterImg character={character} active={active} key={character.id.toString()} />
@@ -97,7 +69,7 @@ class Carousel extends React.Component {
         );
       }
     });
-    const circles = characters.map(character => {
+    const circles = this.state.characters.map(character => {
       if (this.state.activeImgId === character.id) {
         return (
           <i className="fa-solid fa-circle mx-1" key={character.id.toString()} data-id={character.id} onClick={this.handleClick} />
